@@ -35,6 +35,7 @@ The application will be accessible at http://localhost:3000.
 
 # Technologies Used
 React
+TailwindCSS
 React Beautiful Dnd
 Next.js
 
