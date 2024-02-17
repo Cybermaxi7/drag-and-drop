@@ -33,7 +33,7 @@ export default function Drag() {
             newData[index].components.splice(destination.index, 0, ...el);
             setData(newData);
         } else {
-            const newData = JSON.parse(JSON.stringify(data))
+            const newData = JSON.parse(JSON.stringify(data));
             const oldIndex = parseInt(source.droppableId.split("droppable")[1]);
             const newIndex = parseInt(
                 destination.droppableId.split("droppable")[1]
@@ -49,7 +49,14 @@ export default function Drag() {
                 <h1 className="text-center my-10 font-bold text-black text-xl">
                     Drag and Drop Application
                 </h1>
-                <div className="flex justify-between my-10 mx-5 gap-5">
+                <div
+                    className="absolute inset-x-0 top-0 bg-red-500 -z-10"
+                    style={{
+                        clipPath: "polygon(0 0, 100% 0, 100% 80%, 0 100%)",
+                        height: "60%",
+                    }}
+                ></div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 my-10 mx-5 gap-5 z-10">
                     {data.length &&
                         data.map((data, index) => (
                             <Droppable
@@ -60,7 +67,7 @@ export default function Drag() {
                                     <div
                                         {...provided.droppableProps}
                                         ref={provided.innerRef}
-                                        className="border-gray-400 border border-dashed w-1/3"
+                                        className="border-gray-400 border border-dashed w-full "
                                     >
                                         <h2 className="text-center">
                                             {data.title}
@@ -79,7 +86,7 @@ export default function Drag() {
                                                             ref={
                                                                 provided.innerRef
                                                             }
-                                                            className="m-4 p-4 border bg-gray-300"
+                                                            className="m-4 p-4 border rounded-lg bg-gray-300"
                                                         >
                                                             {component.name}
                                                         </div>
