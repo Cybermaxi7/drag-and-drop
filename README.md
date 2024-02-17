@@ -7,7 +7,6 @@ This is a simple drag-and-drop application built with React Beautiful Dnd, Tailw
 - [Features](#features)
 - [Installation](#installation)
 - [Technologies Used](#technologies-used)
-- [License](#license)
 
 ## Features
 
@@ -39,8 +38,3 @@ React
 React Beautiful Dnd
 Next.js
 
-
-License
-
-
-Feel free to customize the content, add or remove sections based on your project's specifics. If you have a live demo, make sure to replace the `[Insert link to a live demo or screenshots here.]` placeholder with the actual link or embed code.
