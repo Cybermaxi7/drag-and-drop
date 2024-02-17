@@ -39,7 +39,7 @@ export default function Drag() {
                 destination.droppableId.split("droppable")[1]
             );
             const el = newData[oldIndex].components.splice(source.index, 1);
-            newData[oldIndex].components.splice(source.index, 0, ...el);
+            newData[newIndex].components.splice(source.index, 0, ...el);
             setData(newData);
         }
     }
